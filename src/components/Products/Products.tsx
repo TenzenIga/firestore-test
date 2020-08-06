@@ -76,12 +76,27 @@ export default function Products() {
  
     return (
         <div>
-            {breakfast && <h2>Завтрак</h2>}
-            {breakfast}
-            {dinner &&  <h2>Обед</h2> }
-            {dinner}
-            {supper && <h2>Ужин</h2>}
-            {supper}
+            {
+            breakfast && 
+                <div className='breakfast'> 
+                    <h3 className='heading' >Завтрак</h3>
+                    {breakfast}
+                </div>
+            }
+            {
+            dinner && 
+                <div className='dinner'>
+                        <h3 className='heading'>Обед</h3> 
+                    {dinner}
+                </div>
+            }
+            
+            {supper && 
+                <div className='supper'>
+                    <h3 className='heading'>Ужин</h3>
+                    {supper}
+                </div>
+            }
         </div>
     )
 }

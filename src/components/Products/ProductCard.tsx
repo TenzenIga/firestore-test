@@ -23,8 +23,8 @@ export default function ProductCard({id, title, measure, price, emoji, uploadcar
     return (
         <div className='meal'>
             <picture>
-                <source srcSet={`https://ucarecdn.com/${uploadcareId}/-/resize/x360/-/format/webp/`}></source>
-                <img src={`https://ucarecdn.com/${uploadcareId}/-/resize/x360/-/format/auto/`} alt={title} />
+                <source srcSet={`https://ucarecdn.com/${uploadcareId}/`}></source>
+                <img src={`https://ucarecdn.com/${uploadcareId}/`} alt={title} />
             </picture>
             {
                 user
