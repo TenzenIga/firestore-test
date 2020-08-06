@@ -1,0 +1,44 @@
+.auth{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background:rgb(255, 255, 255); 
+}
+
+.auth input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.auth button:disabled{
+    color: rgb(238, 238, 238);
+    box-shadow: none;
+    cursor: unset;
+    background: rgb(196, 196, 196);
+}
+.auth button{
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 19px;
+    box-shadow: rgba(18, 18, 18, 0.25) 0px 0px 10px;
+    background: rgb(18, 18, 18);
+}
+
+
+@media (min-width:600px){
+    .auth{
+      width: 500px;
+      margin: 10px auto;
+    }
+  }
+  

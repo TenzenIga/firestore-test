@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Auth from './components/Auth/Auth';
+import { Modal } from './components/Modal/Modal';
+import Products from './components/Products/Products';
+import AddMeal from './components/MealForm/AddMeal';
+
 
 function App() {
+
+  const [openAuthModal, setOpenAuthModal] = React.useState(false)
+  const [openAddModal, setOpenAddModal] = React.useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <div className='container'>
+          <Header  handleOpenAuth={setOpenAuthModal} handleShowModal={setOpenAddModal} />   
+        </div>
+      </nav>
+      <div className='container'>
+        <Products  />
+        <Modal show={openAuthModal} handleShowModal={setOpenAuthModal} >
+          <Auth handleShowModal={setOpenAuthModal}  />
+        </Modal>
+        
+        <Modal show={openAddModal} handleShowModal={setOpenAddModal} >
+            <AddMeal handleShowModal={setOpenAddModal} />
+        </Modal>
+    
+      </div>        
     </div>
   );
 }

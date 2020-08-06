@@ -1,0 +1,93 @@
+.meal{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.meal img{
+    height: 180px;
+    width: 180px;
+    cursor: pointer;
+}
+.meal-title{
+   
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(18, 18, 18);
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.meal-controls{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.meal-controls button{
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(18, 18, 18);
+    white-space: nowrap;
+    border-color: rgb(18, 18, 18);
+    background: transparent;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
+.meal-controls button:last-child{
+    margin-left: 5px;
+}
+
+.meal-info{
+    margin-left: 10px;
+}
+
+
+.meal-button{
+    display: flex;
+    align-items: baseline;
+
+}
+.meal-button button{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 16px;
+    color: rgb(18, 18, 18);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    min-width: 86px;
+    background: transparent;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(18, 18, 18);
+    border-image: initial;
+    padding: 10px 15px;
+    outline: none;
+}
+
+.meal-button p{
+    margin-left: 5px;
+}
+
+.text-secondary{
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(196, 196, 196);
+    white-space: nowrap;
+    font-weight: normal;
+  
+}
+
+@media (min-width:600px){
+    .meal-controls{
+        right: 50%;
+    }
+
+}
