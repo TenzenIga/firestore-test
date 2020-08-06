@@ -1,5 +1,5 @@
 import React, {createContext, useReducer } from 'react';
-import {IState, action} from '../types/types';
+import {IState, IAction} from '../types/types';
 
 
 
@@ -10,7 +10,7 @@ const initialState:IState = {
 export const AuthContext = createContext<IState | any>(initialState);
 
 
-function reducer(state:IState,action:action){
+function reducer(state:IState, action:IAction){
     switch (action.type) {
         case 'LOGIN':
             return {...state, user:action.payload }

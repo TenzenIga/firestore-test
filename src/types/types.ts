@@ -48,7 +48,7 @@ export interface IState{
 }
 
 
-export type action = {
+export interface IAction{
   type:string,
   payload:any
 }
